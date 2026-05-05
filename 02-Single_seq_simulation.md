@@ -2,16 +2,12 @@
 
 We now have the basis of our model: the ability to mutate sequences. Next, we are going to simulate evolution by taking a sequence and letting it mutate in a number of time steps. Then, we are going to compare how identical the mutating sequence is with the original sequence.
 
-&lt;page_number&gt;1&lt;/page_number&gt;
-
----
-
-
-## Page 2
-
 **Exercise 4**
 
-In a new cell, generate a (random) DNA sequence of 50 nucleotides. Then, write a loop that will 1) mutate the sequence and 2) compare the mutated sequence with the original sequence and 3) store the identity scores in a list, for 600 time/mutation steps
+In a new cell, generate a (random) DNA sequence of 50 nucleotides. Then, write a loop that will:
+1. Mutate the sequence
+2. Compare the mutated sequence with the original sequence
+3. Store the identity scores in a list, for 600 time/mutation steps
 
 **Exercise 5**
 
@@ -29,4 +25,4 @@ What will this plot look like if instead of comparing the original sequence with
 
 What is the effect of the sequence length? Compare the identity scores over time of a short and long sequence.
 
-
+[Go to module 3](03-DNA_vs_protein.md)
