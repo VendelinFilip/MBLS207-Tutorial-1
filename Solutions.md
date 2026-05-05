@@ -42,14 +42,8 @@ for time in range(1000):
     identity_scores.append(seq_identity(original_seq,mutated_seq))
 ```
 
-&lt;page_number&gt;4&lt;/page_number&gt;
+## Solution 5
 
----
-
-
-## Page 5
-
-Solution 5
 ```python
 import matplotlib.pyplot as plt
 plt.plot(range(len(identity_scores)), identity_scores)
@@ -59,17 +53,22 @@ plt.ylim(0,100)
 plt.xlim(0, len(identity_scores))
 ```
 
-Solution 6
+## Solution 6
+
 The similarity score rapidly decreases in the first time steps, but after a while seems to stagnate around 25%. This 25% is the expected identity between two randomly drawn sequences.
 
-Solution 7
+## Solution 7
+
 Since we start out with no similarities between the two sequences, and mutation will introduce similarities, the identity score will increase over time towards 25%.
 
-Solution 8
+## Solution 8
+
 With longer sequences, the decrease in identity score is slower than with shorter sequences.
 
-Solution 9
+## Solution 9
+
 Looking up from MBLS102:
+
 ```python
 def translate_dna(dna_seq):
     bases = ["T", "C", "A", "G"]
@@ -86,14 +85,8 @@ def translate_dna(dna_seq):
     return ''.join(protein_seq)
 ```
 
-&lt;page_number&gt;5&lt;/page_number&gt;
+## Solution 10
 
----
-
-
-## Page 6
-
-Solution 10
 ```python
 original_seq=''.join(random.choices(['A','T','C','G'],k=500))
 original_aa_seq=translate_dna(original_seq)
@@ -106,18 +99,20 @@ for time in range(1000):
     identity_scores_aa.append(seq_identity(original_aa_seq,translate_dna(mutated_seq)))
 ```
 
-Solution 11
+## Solution 11
+
 The identity between protein sequences saturate to a lower level, corresponding to the higher number of amino acids, and hence lower expected identity between two random protein sequences.
 
-Solution 12
+## Solution 12
+
 When we only allow true mutations, we know that each time step in our simulation a mutation will occur. In the case where we also allow a substitution with the original base, we have 25% of not having an actual mutation. So, in the same number of steps, the second option will have only had 75% actual mutations. In other words, in the same amount of steps, we perceived fewer mutations, or evolution goes slower.
 
-Solution 13
+## Solution 13
+
 The original sequence can be seen as an ancestral sequence. Instead, looking at two independently mutation sequences doesn't change the outcome much: if we only let one of the two mutate in every single time step, the results are the same. If both of them can mutate in the same step, that's equivalent to having time run twice as quickly.
 
-Solution 14
+## Solution 14
+
 Many, to name the most important ones:
 * The exclusion of evolutionary pressure to keep certain bases/amino acids the same.
 * Mutation rates, this model doesn't explicitly model time but mutation steps. Mutation rates (number of mutations per time unit) can differ between species.
-
-&lt;page_number&gt;6&lt;/page_number&gt;
